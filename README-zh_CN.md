@@ -7,41 +7,43 @@
 
 # ng-alain
 
-[Ng-zorro-antd](https://github.com/NG-ZORRO/ng-zorro-antd) admin panel front-end framework.
+一套基于 [Ng-zorro-antd](https://github.com/NG-ZORRO/ng-zorro-antd)【ANT DESIGN】 的企业后台模板。
 
-[中文版](README-zh_CN.md)
+[English](README.md)
 
 [DEMO](https://ng-alain.github.io/ng-alain/)
 
-## Quick start
+## 快速入门
 
 ```bash
-# Make sure you are using the latest version of Angular cli
+# 确保使用的是最新版本 Angular cli
 ng new demo --style less
 cd demo
 ng add ng-alain
 ng serve
-# or hmr mode
-npm run hmr
 ```
 
-Please refer to [Cli](https://ng-alain.com/cli) for more details.
+请参考[命令行工具](https://ng-alain.com/cli)了解更多细节。
 
-> [vscode] recommended install [ng-zorro-vscode](https://marketplace.visualstudio.com/items?itemName=cipchk.ng-zorro-vscode) & [ng-alain-vscode](https://marketplace.visualstudio.com/items?itemName=cipchk.ng-alain-vscode) plugins.
+> [vscode] 建议安装 [ng-zorro-vscode](https://marketplace.visualstudio.com/items?itemName=cipchk.ng-zorro-vscode) 和 [ng-alain-vscode](https://marketplace.visualstudio.com/items?itemName=cipchk.ng-alain-vscode) 插件，开发更爽。
+
 
 ## Links
 
-+ [Document](https://ng-alain.com)
++ [文档](https://ng-alain.com)
 + [@delon](https://github.com/ng-alain/delon)
 + [DEMO](https://ng-alain.github.io/ng-alain/)
 
 ## Delon
 
-[delong](https://github.com/ng-alain/delon) is a production-ready solution for admin business components packages, Built on the design principles developed by Ant Design.
+[delong](https://github.com/ng-alain/delon) 是基于 Ant Design 设计理念的企业级中后台前端业务型组件库。
 
 [![Build Status](https://travis-ci.org/ng-alain/delon.svg?branch=master)](https://travis-ci.org/ng-alain/delon)
 [![Dependency Status](https://david-dm.org/ng-alain/delon/status.svg)](https://david-dm.org/ng-alain/delon)
 [![DevDependency Status](https://david-dm.org/ng-alain/delon/dev-status.svg)](https://david-dm.org/ng-alain/delon?type=dev)
+
+[![npm](https://img.shields.io/npm/l/@delon/theme.svg)](https://www.npmjs.com/package/@delon/theme)
+[![npm](https://img.shields.io/npm/dm/@delon/theme.svg)](https://www.npmjs.com/package/@delon/theme)
 
 | package name | npm version | npm next version | taobao version |
 | ------------ |:-----:|:----------:|:----------:|
@@ -60,21 +62,21 @@ Please refer to [Cli](https://ng-alain.com/cli) for more details.
 
 ![Architecture](https://raw.githubusercontent.com/ng-alain/delon/master/_screenshot/architecture.png)
 
-## Features
+## 特性
 
-+ `ng-zorro-antd` based
-+ Responsive Layout
-+ I18n
-+ [@delon](https://github.com/ng-alain/delon)
-+ Lazy load Assets
-+ UI Router States
-+ Customize Theme
-+ Less preprocessor
-+ Well organized & commented code
-+ Simple upgrade
-+ Support Docker deploy
++ 基于 `ng-zorro-antd`
++ 响应式
++ 国际化
++ 基建类库 [@delon](https://github.com/ng-alain/delon)（包括：业务组件、ACL访问控制、缓存、授权、动态表单等）
++ 延迟加载及良好的启用画面
++ 良好的UI路由设计
++ 定制主题
++ Less预编译
++ 良好的目录组织结构
++ 简单升级
++ 支持Docker部署
 
-## App Shots
+## 应用截图
 
 ![desktop](https://raw.githubusercontent.com/ng-alain/delon/master/_screenshot/desktop.png)
 ![ipad](https://raw.githubusercontent.com/ng-alain/delon/master/_screenshot/ipad.png)

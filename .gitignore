@@ -4,6 +4,8 @@
 /dist
 /tmp
 /out-tsc
+/_cli-tpl
+/_mock
 
 # dependencies
 /node_modules
@@ -30,12 +32,12 @@
 /coverage
 /libpeerconnection.log
 npm-debug.log
+yarn-error.log
 testem.log
 /typings
 
 # e2e
-/e2e/*.js
-/e2e/*.map
+/e2e
 
 # System Files
 .DS_Store
