@@ -4,8 +4,6 @@
 /dist
 /tmp
 /out-tsc
-/_cli-tpl
-/_mock
 
 # dependencies
 /node_modules
