@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@alain-default-aside-wd: 250px;
+@alain-default-header-bg: fade(#000, 85%);
+
+.header-logo-expanded {
+  @header-logo-size: 55px;
+
+  background: url("../assets/logo.png") 5px 0 no-repeat;
+  background-size: @header-logo-size @header-logo-size;
+  text-align: left;
+  min-width: @header-logo-size;
+  min-height: @header-logo-size;
+  h1, h2, h3, h4, h5, h6 {
+    color: #eee;
+    line-height: 1;
+    margin-left: @header-logo-size + 10px;
+    margin-bottom: 0.1em;
+    margin-top: 0.1em;
+  }
+}

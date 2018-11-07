@@ -1,7 +1,9 @@
 <div class="alain-default__header-logo">
   <a [routerLink]="['/']" class="alain-default__header-logo-link">
-    <img class="alain-default__header-logo-expanded" src="./assets/logo-full.svg" alt="{{settings.app.name}}" style="max-height:40px;" />
-    <img class="alain-default__header-logo-collapsed" src="./assets/logo.svg" alt="{{settings.app.name}}" style="max-height:30px;" />
+    <div class="header-logo-expanded">
+      <h1 *ngIf="!settings.layout.collapsed"><span>SCP基金会</span></h1>
+      <h4 *ngIf="!settings.layout.collapsed"><span>控制，收容，保护</span></h4>
+    </div>
   </a>
 </div>
 <div class="alain-default__nav-wrap">
@@ -14,7 +16,7 @@
     </li>
     <!-- Github Page -->
     <li>
-      <a class="alain-default__nav-item" href="//github.com/ng-alain/ng-alain" target="_blank">
+      <a class="alain-default__nav-item" href="//github.com/taogeT/angular-scp-foundation" target="_blank">
         <i nz-icon type="github"></i>
       </a>
     </li>
