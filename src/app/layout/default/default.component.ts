@@ -68,7 +68,6 @@ const ICONS = [
 // #endregion
 
 import { environment } from '@env/environment';
-import { SettingDrawerComponent } from './setting-drawer/setting-drawer.component';
 
 @Component({
   selector: 'layout-default',
@@ -141,12 +140,12 @@ export class LayoutDefaultComponent
   ngAfterViewInit(): void {
     // Setting componet for only developer
     if (!environment.production) {
-      setTimeout(() => {
-        const settingFactory = this.resolver.resolveComponentFactory(
-          SettingDrawerComponent,
-        );
-        this.settingHost.createComponent(settingFactory);
-      }, 22);
+      // setTimeout(() => {
+      //   const settingFactory = this.resolver.resolveComponentFactory(
+      //     SettingDrawerComponent,
+      //   );
+      //   this.settingHost.createComponent(settingFactory);
+      // }, 22);
     }
   }
 
