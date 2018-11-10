@@ -1,4 +1,4 @@
-### CoreModule
+# CoreModule
 
 **应** 仅只留 `providers` 属性。
 
