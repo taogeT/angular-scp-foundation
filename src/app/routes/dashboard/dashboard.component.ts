@@ -7,7 +7,8 @@ import { SettingsService } from '@delon/theme';
   templateUrl: './dashboard.component.html',
 })
 export class DashboardComponent implements OnInit {
-  username: String;
+  username: String = '';
+  loading = true;
 
   constructor(
     private http: _HttpClient,
@@ -16,6 +17,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.username = this.settingService.user.name;
+    this.loading = false;
   }
 
 }
