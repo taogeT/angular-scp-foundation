@@ -5,17 +5,25 @@
   </h1>
 </div>
 
-<global-footer class="global-footer">
-  除非特别注明，文章内容采用以下授权方式：
-  <div class="global-footer__links-item">
-    <a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/">
-      Creative Commons Attribution-ShareAlike 3.0 License
-    </a>
+<div nz-row [nzGutter]="24" class="mb-md">
+  <div nz-col [nzXs]="24" [nzSm]="24" [nzMd]="24">
+    <nz-alert nzType="error" [nzCloseable]="false" [nzShowIcon]="false" nzBanner [nzMessage]="warnMessage"
+              nzDescription="严禁未经授权的人员进行访问，肇事者将被监控，定位并处理">
+      <ng-template #warnMessage>
+        <span style="color: #600;">
+          警告：基金会资料库属于
+          <h1 style="display: inline-block; line-height: 1; color: #600;">高度机密</h1>
+        </span>
+      </ng-template>
+    </nz-alert>
   </div>
-  <div class="global-footer__copyright">
-    Copyright
-    <i nz-icon type="copyright"></i>
-    2018
-    <a href="//github.com/cipchk" target="_blank">taogeT</a>出品
+</div>
+
+<div nz-row [nzGutter]="24">
+  <div nz-col [nzXs]="24" [nzSm]="24" [nzMd]="16">
+    <app-dashboard-news></app-dashboard-news>
   </div>
-</global-footer>
+  <div nz-col [nzXs]="24" [nzSm]="24" [nzMd]="8">
+    <app-dashboard-website></app-dashboard-website>
+  </div>
+</div>
