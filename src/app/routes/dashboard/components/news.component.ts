@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-dashboard-news',
   template: `
     <nz-card nzTitle="新闻" [nzBordered]="false" [nzLoading]="loading" class="ant-card__body-nopadding">
-      <nz-list [nzDataSource]="news" [nzRenderItem]="item">
+      <nz-list [nzDataSource]="news" [nzRenderItem]="item" nzSize="large">
         <ng-template #item let-item>
           <nz-list-item style="padding-left: 24px; padding-right: 24px;">
             <nz-list-item-meta [nzTitle]="item.title" [nzDescription]="item.description"></nz-list-item-meta>
@@ -44,7 +44,7 @@ export class NewsComponent implements OnInit {
       `
     }
   ];
-  loading = true;
+  loading: Boolean = true;
 
   constructor() { }
 

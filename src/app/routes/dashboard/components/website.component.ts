@@ -87,7 +87,7 @@ export class WebsiteComponent implements OnInit {
       logo: '//scp-wiki.wdfiles.com/local--files/main/pt.png'
     }
   ];
-  loading = true;
+  loading: Boolean = true;
 
   constructor() { }
 
