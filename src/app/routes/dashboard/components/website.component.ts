@@ -6,14 +6,14 @@ import { Component, OnInit } from '@angular/core';
     <nz-card nzTitle="国际站点" [nzBordered]="false" [nzLoading]="loading"
              [nzBodyStyle]="{'padding-top.px': 12, 'padding-bottom.px': 12 }">
       <div class="members">
-          <div nz-row [nzGutter]="48">
-        <div nz-col [nzSpan]="24" *ngFor="let i of sites">
-          <a [href]="i.url">
-            <nz-avatar nzShape="square" [nzSrc]="i.logo" nzSize="small"></nz-avatar>
-            <span class="member">{{i.title}}</span>
-          </a>
+        <div nz-row [nzGutter]="48">
+          <div nz-col [nzSpan]="24" *ngFor="let i of sites">
+            <a [href]="i.url">
+              <nz-avatar nzShape="square" [nzSrc]="i.logo" nzSize="small"></nz-avatar>
+              <span class="member">{{i.title}}</span>
+            </a>
+          </div>
         </div>
-      </div>
       </div>
     </nz-card>
   `,
