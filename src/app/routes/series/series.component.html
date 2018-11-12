@@ -1,0 +1,12 @@
+<page-header [breadcrumb]="breadcrumb" [title]="title" [loading]="loading">
+  <ng-template #breadcrumb>
+    <nz-breadcrumb>
+      <nz-breadcrumb-item *ngFor="let m of menus | slice: 1">
+        <ng-container *ngIf="m.link">
+          <a [routerLink]="m.link">{{m.text}}</a>
+        </ng-container>
+        <ng-container *ngIf="!m.link">{{m.text}}</ng-container>
+      </nz-breadcrumb-item>
+    </nz-breadcrumb>
+  </ng-template>
+</page-header>

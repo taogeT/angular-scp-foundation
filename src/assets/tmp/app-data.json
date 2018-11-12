@@ -26,23 +26,23 @@
           "children": [
             {
               "text": "SCP系列V (4000-4999)",
-              "link": "/main/series/5"
+              "link": "/series/main/5"
             },
             {
               "text": "SCP系列IV (3000-3999)",
-              "link": "/main/series/4"
+              "link": "/series/main/4"
             },
             {
               "text": "SCP系列III (2000-2999)",
-              "link": "/main/series-3"
+              "link": "/series/main/3"
             },
             {
               "text": "SCP系列II (1000-1999)",
-              "link": "/series-2"
+              "link": "/series/main/2"
             },
             {
               "text": "SCP系列I (001-999)",
-              "link": "/main/series/1"
+              "link": "/series/main/1"
             }
           ]
         },
@@ -52,12 +52,12 @@
           "icon": { "type": "icon", "value": "folder" },
           "children": [
             {
-              "text": "SCP系列II (1000-1999)",
-              "link": "/cn/series/2"
+              "text": "SCP-CN系列II (1000-1999)",
+              "link": "/series/cn/2"
             },
             {
-              "text": "SCP系列I (001-999)",
-              "link": "/cn/series/1"
+              "text": "SCP-CN系列I (001-999)",
+              "link": "/series/cn/1"
             }
           ]
         }
