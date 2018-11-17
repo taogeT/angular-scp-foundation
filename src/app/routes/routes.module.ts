@@ -9,7 +9,7 @@ import { UserLoginComponent } from './passport/login/login.component';
 import { UserRegisterComponent } from './passport/register/register.component';
 import { UserRegisterResultComponent } from './passport/register-result/register-result.component';
 // series pages
-import { SeriesComponent } from './series/series.component';
+import { SeriesModule } from './series/series.module';
 // single pages
 import { CallbackComponent } from './callback/callback.component';
 import { UserLockComponent } from './passport/lock/lock.component';
@@ -17,14 +17,15 @@ import { Exception403Component } from './exception/403.component';
 import { Exception404Component } from './exception/404.component';
 import { Exception500Component } from './exception/500.component';
 
-
+const CUSTOM_MODULES = [
+  DashboardModule,
+  SeriesModule
+];
 const COMPONENTS = [
   // passport pages
   UserLoginComponent,
   UserRegisterComponent,
   UserRegisterResultComponent,
-  // series pages
-  SeriesComponent,
   // single pages
   CallbackComponent,
   UserLockComponent,
@@ -35,7 +36,7 @@ const COMPONENTS = [
 const COMPONENTS_NOROUNT = [];
 
 @NgModule({
-  imports: [ SharedModule, RouteRoutingModule, DashboardModule ],
+  imports: [ SharedModule, RouteRoutingModule, ...CUSTOM_MODULES ],
   declarations: [
     ...COMPONENTS,
     ...COMPONENTS_NOROUNT
