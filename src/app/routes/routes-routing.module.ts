@@ -13,6 +13,7 @@ import { UserRegisterComponent } from './passport/register/register.component';
 import { UserRegisterResultComponent } from './passport/register-result/register-result.component';
 // series pages
 import { SeriesComponent } from './series/series.component';
+import { SeriesResolveService } from './series/series.resolve';
 // single pages
 import { CallbackComponent } from './callback/callback.component';
 import { UserLockComponent } from './passport/lock/lock.component';
@@ -27,7 +28,11 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
-      { path: 'series/:symbol/:id', component: SeriesComponent },
+      {
+        path: 'series/:area/:code',
+        component: SeriesComponent,
+        resolve: { series: SeriesResolveService }
+      },
       // 业务子模块
       // { path: 'widgets', loadChildren: './widgets/widgets.module#WidgetsModule' }
     ]
