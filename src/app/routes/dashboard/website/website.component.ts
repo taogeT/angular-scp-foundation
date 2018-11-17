@@ -20,7 +20,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./website.component.less']
 })
 export class WebsiteComponent implements OnInit {
-  sites: any[] = [
+  sites: { title: string, url: string, logo: string }[] = [
     {
       title: 'SCP-INT 国际翻译站',
       url: '//scp-int.wikidot.com/',
@@ -87,7 +87,7 @@ export class WebsiteComponent implements OnInit {
       logo: '//scp-wiki.wdfiles.com/local--files/main/pt.png'
     }
   ];
-  loading: Boolean = true;
+  loading = true;
 
   constructor() { }
 

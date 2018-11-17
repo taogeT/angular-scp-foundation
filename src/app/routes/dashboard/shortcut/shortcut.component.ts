@@ -21,9 +21,9 @@ export class ShortcutComponent implements OnInit {
     { key: 'choicestOriginal', title: '精品原创SCP'},
     { key: 'choicestStory', title: '精品原创故事'}
   ];
-  @Input() key: String;
-  title: String = '';
-  loading: Boolean = true;
+  @Input() key: string;
+  title = '';
+  loading = true;
 
   constructor() { }
 

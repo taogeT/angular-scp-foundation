@@ -44,7 +44,7 @@ export class NewsComponent implements OnInit {
       `
     }
   ];
-  loading: Boolean = true;
+  loading = true;
 
   constructor() { }
 
