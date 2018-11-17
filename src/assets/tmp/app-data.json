@@ -1,15 +1,16 @@
 {
-  "app": {
-    "name": "SCP基金会资料库",
-    "description": "SCP Foundation front-end framework"
-  },
-  "user": {
-    "name": "研究员",
-    "avatar": "./assets/logo.png",
-    "email": "zwtzjd@gmail.com"
-  },
-  "menu": [
-    {
+  "status": 0,
+  "data": {
+    "app": {
+      "name": "SCP基金会资料库",
+      "description": "SCP Foundation front-end framework"
+    },
+    "user": {
+      "name": "研究员",
+      "avatar": "./assets/logo.png",
+      "email": "zwtzjd@gmail.com"
+    },
+    "menu": [{
       "text": "主导航",
       "group": true,
       "hideInBreadcrumb": true,
@@ -17,12 +18,18 @@
         {
           "text": "主页",
           "link": "/dashboard",
-          "icon": { "type": "icon", "value": "home" }
+          "icon": {
+            "type": "icon",
+            "value": "home"
+          }
         },
         {
           "text": "SCP 总部",
           "group": true,
-          "icon": { "type": "icon", "value": "folder" },
+          "icon": {
+            "type": "icon",
+            "value": "folder"
+          },
           "children": [
             {
               "text": "SCP系列V (4000-4999)",
@@ -49,7 +56,10 @@
         {
           "text": "SCP CN分部",
           "group": true,
-          "icon": { "type": "icon", "value": "folder" },
+          "icon": {
+            "type": "icon",
+            "value": "folder"
+          },
           "children": [
             {
               "text": "SCP-CN系列II (1000-1999)",
@@ -62,6 +72,6 @@
           ]
         }
       ]
-    }
-  ]
+    }]
+  }
 }
