@@ -1,12 +1,9 @@
-<page-header [breadcrumb]="breadcrumb" [title]="title" [loading]="loading">
-  <ng-template #breadcrumb>
-    <nz-breadcrumb>
-      <nz-breadcrumb-item *ngFor="let m of menus | slice: 1">
-        <ng-container *ngIf="m.link">
-          <a [routerLink]="m.link">{{m.text}}</a>
-        </ng-container>
-        <ng-container *ngIf="!m.link">{{m.text}}</ng-container>
-      </nz-breadcrumb-item>
-    </nz-breadcrumb>
-  </ng-template>
-</page-header>
+<page-header [title]="title" [loading]="loading"></page-header>
+
+<nz-card [nzBordered]="false">
+  <nz-tabset [(nzSelectedIndex)]="selectedIndex" [nzShowPagination]="true">
+    <ng-container *ngFor="let i of tabs">
+      <nz-tab *ngIf="i.title" [nzTitle]="i.title"></nz-tab>
+    </ng-container>
+  </nz-tabset>
+</nz-card>

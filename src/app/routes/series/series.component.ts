@@ -1,26 +1,43 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap, Router } from '@angular/router';
-import { MenuService, Menu } from '@delon/theme';
+import { ActivatedRoute } from '@angular/router';
+import { _HttpClient } from '@delon/theme';
+
+import { Series } from './series.model';
 
 @Component({
   selector: 'app-series',
   templateUrl: './series.component.html',
 })
 export class SeriesComponent implements OnInit {
-  id: Number = 0;
-  symbol: String = '';
-  loading: Boolean = true;
-  title: String = '';
-  menus: Menu[] = [];
+  loading = true;
+  title = '';
+  selectedIndex = 0;
+  series: Series;
+  tabs: { key: number, title: string }[] = [
+    { key: 0, title: null },
+    { key: 1, title: null },
+    { key: 2, title: null },
+    { key: 3, title: null },
+    { key: 4, title: null },
+    { key: 5, title: null },
+    { key: 6, title: null },
+    { key: 7, title: null },
+    { key: 8, title: null },
+    { key: 9, title: null },
+  ];
 
-  constructor(private route: ActivatedRoute, private menuSrv: MenuService, private router: Router) { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.route.paramMap.subscribe((params: ParamMap) => {
-      this.id = +params.get('id');
-      this.symbol = params.get('symbol');
-      this.menus = this.menuSrv.getPathByUrl(this.router.url.split('?')[0]);
-      this.title = this.menus[this.menus.length - 1].text;
+    this.route.data.subscribe((data: {series: Series}) => {
+      this.series = data.series;
+      this.title = this.series.title;
+      this.tabs.forEach((tab: { key: number, title: string }) => {
+        const baseNumber = (this.series.code - 1) * 1000 + tab.key * 100;
+        const startNumber = (baseNumber + (tab.key ? 0 : 1)).toString().padStart(3, '0');
+        const endNumber = (baseNumber + 99).toString().padStart(3, '0');
+        tab.title = `${startNumber} to ${endNumber}`;
+      });
       this.loading = false;
     });
   }
