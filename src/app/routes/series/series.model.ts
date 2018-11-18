@@ -4,3 +4,14 @@ export class Series {
   amount: number;
   area: string;
 }
+
+export class SeriesTab {
+  key: number;
+  title: string;
+  startNumber: number;
+  endNumber: number;
+
+  constructor(key: number) {
+    this.key = key;
+  }
+}
