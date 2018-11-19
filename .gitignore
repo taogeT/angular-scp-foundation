@@ -4,6 +4,7 @@
 /dist
 /tmp
 /out-tsc
+/_cli-tpl
 
 # dependencies
 /node_modules
