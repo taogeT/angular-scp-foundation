@@ -1,6 +1,22 @@
 {
   "name": "scp-foundation",
-  "version": "0.0.0",
+  "version": "0.0.2",
+  "description": "Tranform scp wikidot site.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taogeT/angular-scp-foundation.git"
+  },
+  "keywords": [
+    "ng-alain",
+    "ant-design",
+    "ng-zorro-antd",
+    "angular"
+  ],
+  "author": "taogeT <zwtzjd@gmail.com>",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/taogeT/angular-scp-foundation/issues"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
