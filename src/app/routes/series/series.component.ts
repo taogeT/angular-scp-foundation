@@ -29,7 +29,7 @@ export class SeriesComponent implements OnInit {
   private initTabs () {
     const ret: SeriesTab[] = [];
     for (let i = 0; i < 10; i++) {
-      const retTab = new SeriesTab(i);
+      const retTab: SeriesTab = { key: i, startNumber: 0, endNumber: 0, title: null };
       if (this.series) {
         const baseNumber = (this.series.code - 1) * 1000 + retTab.key * 100;
         retTab.startNumber = baseNumber + ((retTab.key > 0 || this.series.code > 1) ? 0 : 1);

@@ -1,17 +1,13 @@
-export class Series {
+export interface Series {
   code: number;
   title: string;
   amount: number;
   area: string;
 }
 
-export class SeriesTab {
+export interface SeriesTab {
   key: number;
   title: string;
   startNumber: number;
   endNumber: number;
-
-  constructor(key: number) {
-    this.key = key;
-  }
 }
