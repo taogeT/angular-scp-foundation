@@ -10,6 +10,8 @@ import { UserRegisterComponent } from './passport/register/register.component';
 import { UserRegisterResultComponent } from './passport/register-result/register-result.component';
 // series pages
 import { SeriesModule } from './series/series.module';
+// aritcles pages
+import { ArticleModule } from './article/article.module';
 // single pages
 import { CallbackComponent } from './callback/callback.component';
 import { UserLockComponent } from './passport/lock/lock.component';
@@ -19,7 +21,8 @@ import { Exception500Component } from './exception/500.component';
 
 const CUSTOM_MODULES = [
   DashboardModule,
-  SeriesModule
+  SeriesModule,
+  ArticleModule
 ];
 const COMPONENTS = [
   // passport pages

@@ -14,6 +14,9 @@ import { UserRegisterResultComponent } from './passport/register-result/register
 // series pages
 import { SeriesComponent } from './series/series.component';
 import { SeriesResolveService } from './series/series.resolve.service';
+// article pages
+import { ArticleComponent } from './article/article.component';
+import { ArticleResolveService } from './article/article.resolve.service';
 // single pages
 import { CallbackComponent } from './callback/callback.component';
 import { UserLockComponent } from './passport/lock/lock.component';
@@ -32,6 +35,11 @@ const routes: Routes = [
         path: 'series/:area/:code',
         component: SeriesComponent,
         resolve: { series: SeriesResolveService }
+      },
+      {
+        path: '/article/:code',
+        component: ArticleComponent,
+        resolve: { series: ArticleResolveService }
       },
       // 业务子模块
       // { path: 'widgets', loadChildren: './widgets/widgets.module#WidgetsModule' }
