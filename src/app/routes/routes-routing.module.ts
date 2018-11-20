@@ -13,7 +13,7 @@ import { UserRegisterComponent } from './passport/register/register.component';
 import { UserRegisterResultComponent } from './passport/register-result/register-result.component';
 // series pages
 import { SeriesComponent } from './series/series.component';
-import { SeriesResolveService } from './series/series.resolve';
+import { SeriesResolveService } from './series/series.resolve.service';
 // single pages
 import { CallbackComponent } from './callback/callback.component';
 import { UserLockComponent } from './passport/lock/lock.component';
