@@ -1,5 +1,5 @@
 export class Article {
-  code: string;
+  name: string;
   title: string;
   content: string;
   tag: string[];

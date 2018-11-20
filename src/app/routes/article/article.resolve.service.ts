@@ -14,9 +14,9 @@ export class ArticleResolveService implements Resolve<Article> {
   constructor(private http: _HttpClient, private router: Router) { }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Article> | Observable<never> {
-    const code = +route.paramMap.get('code');
+    const name = +route.paramMap.get('name');
 
-    return this.http.get<Article>(`/article/${code}`).pipe(
+    return this.http.get<Article>(`/article/${name}`).pipe(
       take(1),
       mergeMap(article => {
         if (article) {

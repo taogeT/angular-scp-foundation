@@ -3,6 +3,7 @@ export interface Series {
   title: string;
   amount: number;
   area: string;
+  articles: { name: { name: number, title: string } };
 }
 
 export interface SeriesTab {

@@ -3,10 +3,13 @@ import * as Mock from 'mockjs';
 // TIPS: mockjs 一些优化细节见：https://ng-alain.com/docs/mock
 
 function articleRule () {
+  const seriesName = this.area === 'cn' ? '-CN' : '';
   return Mock.mock({'articles|5': [{
     'serialNumber|+1': this.code > 1 ? (this.code - 1) * this.amount : 0,
     'title': '@cword(5, 12)',
-    'content': '@cparagraph(3, 8)'
+    'name': function () {
+      return `SCP${seriesName}-${this.serialNumber}`;
+    }
   }]})['articles'];
 }
 

@@ -6,9 +6,12 @@ const list = [
   ...Mock.mock({
     'articles|10': [{
       'serialNumber|+1': 1,
-      'title': '@cword(5, 12)',
-      'content': '@cparagraph(3, 8)',
-      'area': 'main'
+      'title': '@word(5, 12)',
+      'content': '@paragraph(3, 8)',
+      'area': 'main',
+      'name': function () {
+        return 'SCP-' + this.serialNumber;
+      }
     }]
   })['articles'],
   ...Mock.mock({
@@ -16,7 +19,10 @@ const list = [
       'serialNumber|+1': 1,
       'title': '@cword(5, 12)',
       'content': '@cparagraph(3, 8)',
-      'area': 'cn'
+      'area': 'cn',
+      'name': function () {
+        return 'SCP-CN-' + this.serialNumber;
+      }
     }]
   })['articles']
 ];
