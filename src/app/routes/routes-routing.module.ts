@@ -37,7 +37,7 @@ const routes: Routes = [
         resolve: { series: SeriesResolveService }
       },
       {
-        path: '/article/:code',
+        path: 'article/:code',
         component: ArticleComponent,
         resolve: { series: ArticleResolveService }
       },
