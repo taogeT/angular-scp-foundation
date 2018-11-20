@@ -83,6 +83,7 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "less-bundle-promise": "^1.0.7",
     "lint-staged": "^7.1.2",
+    "mockjs": "^1.0.1-beta3",
     "prettier": "^1.12.1",
     "prettier-stylelint": "^0.4.2",
     "protractor": "^5.4.1",
