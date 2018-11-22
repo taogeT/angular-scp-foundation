@@ -21,7 +21,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod --build-optimizer",
-    "test": "ng test",
+    "test": "ng test --watch=false --browsers=ChromeHeadless",
     "lint": "npm run lint:ts && npm run lint:style",
     "e2e": "ng e2e",
     "analyze": "ng build --prod --build-optimizer --stats-json",
