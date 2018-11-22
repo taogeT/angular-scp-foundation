@@ -3,7 +3,8 @@
     <div nz-col [nzXs]="24" [nzSm]="12" [nzMd]="6">
       <ol class="list-styled">
         <li *ngFor="let article of part">
-          <a [routerLink]="['/article', article.name]" [style.color]="!article.isReal && '#d61'">
+          <a [routerLink]="article.isReal ? ['/article', article.name] : ['/404']"
+             [style.color]="!article.isReal && '#d61'">
             {{article.name}} - {{article.title}}
           </a>
         </li>
