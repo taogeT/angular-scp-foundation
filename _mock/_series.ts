@@ -4,13 +4,19 @@ import * as Mock from 'mockjs';
 
 function articleRule () {
   const seriesName = this.area === 'cn' ? '-CN' : '';
-  return Mock.mock({'articles|5': [{
+  const mockData = Mock.mock({'articles|5': [{
     'serialNumber|+1': this.code > 1 ? (this.code - 1) * this.amount : 0,
     'title': '@cword(5, 12)',
+    'isReal': true,
     'name': function () {
-      return `SCP${seriesName}-${this.serialNumber}`;
+      return `SCP${seriesName}-${this.serialNumber.toString().padStart(3, '0')}`;
     }
-  }]})['articles'];
+  }]});
+  const ret = new Map<string, { name: string, title: string}>();
+  mockData['articles'].forEach(article => {
+    ret.set(article.name, article);
+  });
+  return ret;
 }
 
 function titleRule () {

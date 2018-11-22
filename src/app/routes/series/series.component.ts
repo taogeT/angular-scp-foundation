@@ -11,9 +11,9 @@ import { Series, SeriesTab } from './series.model';
 export class SeriesComponent implements OnInit {
   loading = true;
   title = '';
+  selectedIndex = 0;
   series: Series;
   tabs: SeriesTab[];
-  parts: any[];
 
   constructor(private route: ActivatedRoute) { }
 
@@ -22,6 +22,7 @@ export class SeriesComponent implements OnInit {
       this.series = data.series;
       this.title = this.series.title;
       this.tabs = this.initTabs();
+      this.selectedIndex = 0;
       this.loading = false;
     });
   }
@@ -29,7 +30,9 @@ export class SeriesComponent implements OnInit {
   private initTabs () {
     const ret: SeriesTab[] = [];
     for (let i = 0; i < 10; i++) {
-      const retTab: SeriesTab = { key: i, startNumber: 0, endNumber: 0, title: null };
+      const retTab: SeriesTab = {
+        key: i, startNumber: 0, endNumber: 0, title: null, area: this.series.area
+      };
       if (this.series) {
         const baseNumber = (this.series.code - 1) * 1000 + retTab.key * 100;
         retTab.startNumber = baseNumber + ((retTab.key > 0 || this.series.code > 1) ? 0 : 1);
@@ -37,19 +40,7 @@ export class SeriesComponent implements OnInit {
         retTab.title = `${retTab.startNumber.toString().padStart(3, '0')} to ${retTab.endNumber.toString().padStart(3, '0')}`;
       }
       ret.push(retTab);
-      if (i === 0) {
-        this.parts = [
-          { count: 25, articles: new Array(25) },
-          { count: 25, articles: new Array(25) },
-          { count: 25, articles: new Array(25) },
-          { count: 25, articles: new Array(25) },
-        ];
-      }
     }
     return ret;
-  }
-
-  tabChange(nzSelectedIndex: EventEmitter<number>) {
-    console.log(nzSelectedIndex);
   }
 }

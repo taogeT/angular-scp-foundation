@@ -3,7 +3,7 @@ export interface Series {
   title: string;
   amount: number;
   area: string;
-  articles: { name: { name: number, title: string } };
+  articles: Map<string, SeriesContent>;
 }
 
 export interface SeriesTab {
@@ -11,4 +11,11 @@ export interface SeriesTab {
   title: string;
   startNumber: number;
   endNumber: number;
+  area: string;
+}
+
+export interface SeriesContent {
+  name: string;
+  title: string;
+  isReal: boolean;
 }

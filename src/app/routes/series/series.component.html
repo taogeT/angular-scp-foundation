@@ -1,22 +1,13 @@
 <page-header [title]="title" [loading]="loading"></page-header>
 
 <nz-card [nzBordered]="false">
-  <nz-tabset *ngIf="tabs" (nzSelectedIndexChange)="tabChange($event)" [nzShowPagination]="true">
+  <nz-tabset *ngIf="tabs" [(nzSelectedIndex)]="selectedIndex" [nzShowPagination]="true">
     <ng-container *ngFor="let i of tabs">
       <nz-tab *ngIf="i.title" [nzTitle]="i.title"></nz-tab>
     </ng-container>
   </nz-tabset>
 
-  <div nz-row [nzGutter]="24">
-    <ng-container *ngFor="let part of parts">
-      <div nz-col [nzXs]="24" [nzSm]="12" [nzMd]="6">
-        <ol class="list-styled">
-          <li *ngFor="let article of part.articles">
-            <a [routerLink]="['/404']" [style.color]="'#d61'">{{article || '????'}}</a>
-            - [禁止访问]
-          </li>
-        </ol>
-      </div>
-    </ng-container>
-  </div>
+  <app-series-content [articles]="series.articles"
+                      [selectedTab]="tabs[selectedIndex]">
+  </app-series-content>
 </nz-card>

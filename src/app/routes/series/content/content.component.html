@@ -1,3 +1,13 @@
-<p>
-  content works!
-</p>
+<div nz-row [nzGutter]="24">
+  <ng-container *ngFor="let part of parts">
+    <div nz-col [nzXs]="24" [nzSm]="12" [nzMd]="6">
+      <ol class="list-styled">
+        <li *ngFor="let article of part">
+          <a [routerLink]="['/article', article.name]" [style.color]="!article.isReal && '#d61'">
+            {{article.name}} - {{article.title}}
+          </a>
+        </li>
+      </ol>
+    </div>
+  </ng-container>
+</div>
