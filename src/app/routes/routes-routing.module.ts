@@ -39,7 +39,7 @@ const routes: Routes = [
       {
         path: 'article/:name',
         component: ArticleComponent,
-        resolve: { series: ArticleResolveService }
+        resolve: { article: ArticleResolveService }
       },
       // 业务子模块
       // { path: 'widgets', loadChildren: './widgets/widgets.module#WidgetsModule' }

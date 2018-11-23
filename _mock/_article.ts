@@ -10,7 +10,7 @@ const list = [
       'content': '@paragraph(3, 8)',
       'area': 'main',
       'name': function () {
-        return 'SCP-' + this.serialNumber;
+        return 'SCP-' + this.serialNumber.toString().padStart(3, '0');
       }
     }]
   })['articles'],
@@ -21,22 +21,18 @@ const list = [
       'content': '@cparagraph(3, 8)',
       'area': 'cn',
       'name': function () {
-        return 'SCP-CN-' + this.serialNumber;
+        return 'SCP-CN-' + this.serialNumber.toString().padStart(3, '0');
       }
     }]
   })['articles']
 ];
 
-function genData(area: string, code: number) {
-  return [...list].find(data => {
-    const isArea = !area || data.area === area;
-    const isCode = !code || data.serialNumber === code;
-    return isArea && isCode;
-  });
+function genData(name: string) {
+  return [...list].find(data => data.name === name);
 }
 
 export const ARTICLE = {
   // 支持值为 Object 和 Array
   // GET 可省略
-  'GET /article/:area/:code': (req: MockRequest) => genData(req.params.area, +req.params.code),
+  'GET /article/:name': (req: MockRequest) => genData(req.params.name),
 };
