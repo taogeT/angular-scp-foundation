@@ -1,3 +1,17 @@
-<p>
-  article works!
-</p>
+<page-header [title]="article.name + ' - ' + article.title"
+             [loading]="loading" [breadcrumb]="breadcrumb">
+  <ng-template #breadcrumb>
+    <nz-breadcrumb>
+      <nz-breadcrumb-item>
+        <a [routerLink]="['/series', article.area, getSeriesId()]">返回上级</a>
+      </nz-breadcrumb-item>
+      <nz-breadcrumb-item>{{article.name}}</nz-breadcrumb-item>
+    </nz-breadcrumb>
+  </ng-template>
+</page-header>
+
+<nz-card [nzBordered]="false">
+  <p>
+    {{article.content}}
+  </p>
+</nz-card>
