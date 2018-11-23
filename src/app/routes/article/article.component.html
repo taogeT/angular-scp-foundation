@@ -1,9 +1,8 @@
-<page-header [title]="article.name + ' - ' + article.title"
-             [loading]="loading" [breadcrumb]="breadcrumb">
+<page-header [title]="fullTitle" [loading]="loading" [breadcrumb]="breadcrumb">
   <ng-template #breadcrumb>
     <nz-breadcrumb>
       <nz-breadcrumb-item>
-        <a [routerLink]="['/series', article.area, getSeriesId()]">返回上级</a>
+        <a [routerLink]="['/series', article.area, seriesId]">返回上级</a>
       </nz-breadcrumb-item>
       <nz-breadcrumb-item>{{article.name}}</nz-breadcrumb-item>
     </nz-breadcrumb>

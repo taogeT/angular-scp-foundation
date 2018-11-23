@@ -21,7 +21,11 @@ export class ArticleComponent implements OnInit {
     });
   }
 
-  getSeriesId() {
+  get seriesId(): number {
     return Math.ceil(this.article.serialNumber / 1000);
+  }
+
+  get fullTitle(): string {
+    return `${this.article.name} - ${this.article.title}`;
   }
 }
